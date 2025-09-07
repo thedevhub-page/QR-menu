@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Menu</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <style>
+   
+.card {
+  width: 100%; 
+}
+
+/* Tablet */
+@media (min-width: 577px) and (max-width: 992px) {
+  .card {
+    width: 22rem; 
+  }
+}
+
+/* Desktop / Laptop */
+@media (min-width: 993px) {
+  .card {
+    width: 26rem;
+  }
+}
+
+
+    body {
+      background: linear-gradient(135deg, black, rgb(209, 10, 10), black);
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 100vh;
+    }
+
+    h1 {
+      -webkit-text-stroke: 2px rgb(12, 11, 11);
+    }
+
+    .card,
+    .card-body,
+    .card-img-top {
+      background: transparent !important;
+    }
+
+    .card-img-top {
+      transition: transform 0.3s ease;
+    }
+
+    .card-img-top:hover {
+      transform: scale(1.1);
+    }
+    .testimonial-card {
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      padding: 15px;
+      border-radius: 10px;
+      color: white;
+    }
+    .special-banner {
+      background: linear-gradient(90deg, #ff4e50, #f9d423);
+      color: white;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+  <nav class="navbar navbar-expand-lg fw-bold text-white">
+    <div class="container-md">
+      <a class="navbar-brand text-white" href="#">FoodMenu</a>
+    </div>
+  </nav>
+ </header>
+  <h1 class="display-1 fw-bold text-center mt-4"> <span style="color: red;"> Food</span> Menu</h1>
+
+  <p class="tagline mt-4 display-6 text-center text-white">Delicious food at your fingertips 🍔🍕</p>
+
+<div class="container text-center my-4">
+    <div class="special-banner">
+      🎉 Special Deal: 10% off on orders above ₹500! Use code: <strong>WEEKEND10</strong>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- Row 1 -->
+    <div class="row g-5 justify-content-center">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+        <div class="card" style="border: none; margin-bottom: 13%; margin-top: 5%; width: 24rem;">
+          <img src="pizza2.jpeg" class="card-img-top img-fluid rounded" alt="Pizza" style="height:230px; object-fit:cover;">
+          <div class="card-body text-center">
+            <h5 class="card-title text-white">Pizza</h5>
+            <p class="card-text text-white">Paneer Tikka Pizza, Cheese Burst Pizza etc.</p>
+            ⭐⭐⭐⭐⭐ <br><br>
+            <a href="#" class="btn btn-danger" onclick="confirmOrder('Pizza')">Order now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+        <div class="card" style="border: none; margin-bottom: 13%; margin-top: 5%; width: 24rem;">
+          <img src="roll2.jpeg" class="card-img-top img-fluid rounded" alt="Rolls" style="height:230px; object-fit:cover;">
+          <div class="card-body text-center">
+            <h5 class="card-title text-white">Rolls</h5>
+            <p class="card-text text-white">Paneer Roll, Veg Roll, Cheese Roll etc</p>
+            ⭐⭐⭐⭐⭐ <br><br>
+            <a href="#" class="btn btn-danger" onclick="confirmOrder('Roll')">Order now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="row g-5 justify-content-center">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+        <div class="card" style="border: none; margin-bottom: 13%; margin-top: 5%; width: 24rem;">
+          <img src="rice2.jpeg" class="card-img-top img-fluid rounded" alt="Rice" style="height:230px; object-fit:cover;">
+          <div class="card-body text-center">
+            <h5 class="card-title text-white">Rice</h5>
+            <p class="card-text text-white">Veg Fried Rice, Paneer Fried Rice etc.</p>
+            ⭐⭐⭐⭐⭐ <br><br>
+            <a href="#" class="btn btn-danger" onclick="confirmOrder('Rice')">Order now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+        <div class="card" style="border: none; margin-bottom: 13%; margin-top: 5%; width: 24rem;">
+          <img src="noodles2.jpeg" class="card-img-top img-fluid rounded" alt="Noodles" style="height:230px; object-fit:cover;">
+          <div class="card-body text-center">
+            <h5 class="card-title text-white">Noodles</h5>
+            <p class="card-text text-white">Veg Noodles, Chowmein,  etc.</p>
+            ⭐⭐⭐⭐⭐ <br><br>
+            <a href="#" class="btn btn-danger" onclick="confirmOrder('Noodles')">Order now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 3 -->
+    <div class="row g-5 justify-content-center">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+        <div class="card" style="border: none; margin-bottom: 24%; margin-top: 5%; width: 24rem;">
+          <img src="momo2.jpeg" class="card-img-top img-fluid rounded" alt="Momo" style="height:230px; object-fit:cover;">
+          <div class="card-body text-center">
+            <h5 class="card-title text-white">Momo</h5>
+            <p class="card-text text-white">🥗Veg Momo, Paneer Momo, Cheese Momo etc.</p>
+            ⭐⭐⭐⭐⭐ <br><br>
+            <a href="#" class="btn btn-danger" onclick="confirmOrder('Momo')">Order now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+        <div class="card" style="border: none; margin-bottom: 24%; margin-top: 5%; width: 24rem;">
+          <img src="manchurian2.jpeg" class="card-img-top img-fluid rounded" alt="Manchurian" style="height:230px; object-fit:cover;">
+          <div class="card-body text-center">
+            <h5 class="card-title text-white">Manchurian</h5>
+            <p class="card-text text-white">Veg cheese Manchurian, Non-Veg Manchurian etc.</p>
+            ⭐⭐⭐⭐⭐
+            <br><br>
+            <a href="#" class="btn btn-danger" onclick="confirmOrder('Manchurian')">Order now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<div class="row justify-content-center my-5">
+      <h3 class="text-center text-white mb-4">What Our Customers Say</h3>
+      <div class="col-12 col-md-4 d-flex justify-content-center mb-3">
+        <div class="testimonial-card">
+          <p>"Best pizza I’ve ever had! Quick delivery and fresh ingredients. ⭐⭐⭐⭐⭐"</p>
+          <h6 class="text-end">- Anjali</h6>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 d-flex justify-content-center mb-3">
+        <div class="testimonial-card">
+          <p>"Love the momo! Perfectly soft and cheesy. Highly recommended. ⭐⭐⭐⭐⭐"</p>
+          <h6 class="text-end">- Rohan</h6>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class=" text-white text-center py-4 mt-5">
+  <p class="mb-1">📢 Special Offer: Get 10% off on orders above ₹500!</p>
+  <p class="mb-0">Contact us: +91 12345 67890 | Email: foodmenu@123.com</p>
+</footer>
+
+
+  <script>
+    function confirmOrder(item) {
+      alert(item + " order confirmed ✅");
+    }
+  </script>
+</body>
+
+</html>
